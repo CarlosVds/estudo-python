@@ -34,7 +34,7 @@ except:
 velocidade = 70
 local_carro = 90
 
-RODAR_1 = 60
+RADAR_1 = 60
 LOCAL_1 = 100
 RADAR_RANGE = 1
 

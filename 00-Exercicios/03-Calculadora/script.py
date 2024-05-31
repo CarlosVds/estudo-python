@@ -1,6 +1,38 @@
 """Calculadora com o while"""
 
 while True:
+
+    num_1 = input('Digite um número.')
+    num_2 = input('Digite outro número.')
+    operador = input('Digite um operador (+-/*).')
+
+    numeros_validos = None
+
+    operador_permitidos = '+-/*'
+
+    try:
+        num_1_float = float(num_1)
+        num_2_float = float(num_2)
+
+        numeros_validos = True
+    except:    
+        numeros_validos = None
+
+
+    if numeros_validos is None:
+        print('Um ou ambos números digitados são inválidos.')
+        continue    
+
+    if operador not in operador_permitidos:
+        print('Operador inválidos.')
+        continue    
+
+    if len(operador) > 1:
+        print('Apena um operador..')
+        continue    
+
     sair = input("Quer sair? [s]im:  ").lower().startswith('s')
-    break
-print("Fim dp programa")
+
+    if sair is True:
+        break
+   

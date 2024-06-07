@@ -2,13 +2,15 @@
 
 while True:
 
-    num_1 = input('Digite um número.')
-    num_2 = input('Digite outro número.')
-    operador = input('Digite um operador (+-/*).')
+    num_1 = input('Digite um número = ')
+    num_2 = input('Digite outro número = ')
+    operador = input('Digite um operador (+-/*) =')
 
     numeros_validos = None
-
     operador_permitidos = '+-/*'
+    num_1_float = 0
+    num_2_float = 0
+
 
     try:
         num_1_float = float(num_1)
@@ -29,7 +31,19 @@ while True:
 
     if len(operador) > 1:
         print('Apena um operador..')
-        continue    
+        continue 
+
+    if operador == '+':
+        print(f'{num_1_float} + {num_2} = ', num_1_float + num_2_float)
+    elif operador == '-':
+        print(f'{num_1_float} - {num_2} = ', num_1_float - num_2_float)
+    elif operador == '/':
+        print(f'{num_1_float} / {num_2} = ', num_1_float / num_2_float)        
+    elif operador == '*':
+        print(f'{num_1_float} * {num_2} = ', num_1_float * num_2_float)
+    else:
+        print('Nunca deveria de chegado aqui.')
+
 
     sair = input("Quer sair? [s]im:  ").lower().startswith('s')
 
